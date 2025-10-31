@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Person {
     // TODO: Define the 'Person' class with 'name' and 'age' member variables
-    String name;
+    String name; 
     int age;
 
     public static void main(String[] args) {
