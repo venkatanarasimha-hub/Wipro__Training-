@@ -1,0 +1,188 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Management – Sprint 2</title>
+
+<!-- BOOTSTRAP -->
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+<style>
+ body {
+ background: #f0f4ff;
+ font-family: Arial, sans-serif;
+ margin: 0;
+ }
+ /* Header */
+ .header {
+ background: #003399;
+ padding: 15px;
+ color: white;
+ display: flex;
+ align-items: center;
+ justify-content: flex-start;
+ }
+ .logo {
+ width: 70px;
+ margin-right: 15px;
+ }
+ .title {
+ font-size: 28px;
+ font-weight: bold;
+ }
+
+ /* Navigation */
+ .navbar-custom {
+ background: #0055cc;
+ }
+ .navbar-custom .nav-link {
+ color: white !important;
+ font-size: 18px;
+ font-weight: bold;
+ }
+
+ /* Content sections */
+ .section {
+ display: none;
+ padding: 20px;
+ }
+ .active {
+ display: block;
+ }
+
+ /* Card */
+ .card-custom {
+ padding: 20px;
+ border-radius: 10px;
+ background: white;
+ box-shadow: 0 0 10px rgba(0,0,0,0.1);
+ }
+
+ /* Timetable */
+ .table thead {
+ background: #003399;
+ color: white;
+ }
+</style>
+
+<script>
+ function showSection(name) {
+ document.getElementById("welcome").style.display = "none";
+ document.getElementById("profile").style.display = "none";
+ document.getElementById("timetable").style.display = "none";
+ document.getElementById(name).style.display = "block";
+ }
+</script>
+</head>
+
+<body onload="showSection('welcome')">
+
+<!-- HEADER -->
+<div class="header">
+ <img src="school.jpg" class="logo">
+ <div class="title">Spring Flowers School</div>
+</div>
+
+<!-- MENU BAR -->
+<nav class="navbar navbar-expand-lg navbar-custom">
+ <div class="container-fluid">
+ <div class="navbar-nav">
+ <a class="nav-link" href="#" onclick="showSection('welcome')">Home</a>
+ <a class="nav-link" href="#" onclick="showSection('profile')">Student Profile</a>
+ <a class="nav-link" href="#" onclick="showSection('timetable')">TimeTable</a>
+ </div>
+ </div>
+</nav>
+
+<!-- WELCOME PAGE -->
+<div id="welcome" class="section active">
+ <div class="container d-flex justify-content-center">
+ <div class="card-custom col-md-6">
+ <h2>Welcome to Student Management Portal</h2>
+ <p>Your official online interface for Spring Flowers School.</p>
+ <p>Use the menu above to access your information.</p>
+ </div>
+ </div>
+</div>
+
+<!-- STUDENT PROFILE PAGE -->
+<div id="profile" class="section">
+ <div class="container d-flex justify-content-center">
+ <div class="card-custom col-md-6 text-center">
+ <h2>Student Profile</h2>
+ <img src="https://via.placeholder.com/150" class="img-fluid rounded mb-3" width="150">
+ <p><strong>Name:</strong> Venkat Thanam</p>
+ <p><strong>Class:</strong> 10th Grade</p>
+ <p><strong>Roll No:</strong> 21</p>
+ <p><strong>Location:</strong> Chennai</p>
+ </div>
+ </div>
+</div>
+
+<!-- TIME TABLE PAGE -->
+<div id="timetable" class="section">
+ <div class="container">
+ <div class="card-custom">
+ <h2 class="text-center mb-3">Weekly Time Table</h2>
+
+ <table class="table table-bordered text-center">
+ <thead>
+ <tr>
+ <th>Day</th>
+ <th>9 AM</th>
+ <th>10 AM</th>
+ <th>11 AM</th>
+ <th>12 PM</th>
+ </tr>
+ </thead>
+
+ <tbody>
+ <tr>
+ <td>Monday</td>
+ <td>Maths</td>
+ <td>Science</td>
+ <td>English</td>
+ <td>Sports</td>
+ </tr>
+ <tr>
+ <td>Tuesday</td>
+ <td>Social</td>
+ <td>Science</td>
+ <td>Maths</td>
+ <td>Computer</td>
+ </tr>
+ <tr>
+ <td>Wednesday</td>
+ <td>English</td>
+ <td>Maths</td>
+ <td>Social</td>
+ <td>Library</td>
+ </tr>
+ <tr>
+ <td>Thursday</td>
+ <td>Maths</td>
+ <td>Science</td>
+ <td>English</td>
+ <td>Sports</td>
+ </tr>
+ <tr>
+ <td>Friday</td>
+ <td>Computer</td>
+ <td>Science</td>
+ <td>English</td>
+ <td>Social</td>
+ </tr>
+ </tbody>
+
+ </table>
+ </div>
+ </div>
+</div>
+
+</body>
+</html>
