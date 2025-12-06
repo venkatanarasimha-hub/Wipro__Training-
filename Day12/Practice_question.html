@@ -1,0 +1,114 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Student Management – Spring Flowers School</title>
+<style>
+ body {
+ margin: 0;
+ font-family: Arial, sans-serif;
+ background: #f0f4ff;
+ }
+ /* HEADER */
+ .header {
+ background: #003399;
+ padding: 20px;
+ color: white;
+ display: flex;
+ align-items: center;
+ }
+ .logo {
+ width: 80px;
+ margin-right: 20px;
+ }
+ .title {
+ font-size: 30px;
+ font-weight: bold;
+ }
+ /* NAVIGATION BAR */
+ .navbar {
+ background: #0055cc;
+ padding: 10px;
+ display: flex;
+ gap: 20px;
+ }
+ .navbar a {
+ color: white;
+ text-decoration: none;
+ font-size: 18px;
+ font-weight: bold;
+ }
+ .navbar a:hover {
+ text-decoration: underline;
+ }
+ /* CONTENT BOXES */
+ .section {
+ display: none;
+ padding: 30px;
+ }
+ .active {
+ display: block;
+ }
+ .card {
+ background: white;
+ padding: 20px;
+ border-radius: 10px;
+ width: 400px;
+ box-shadow: 0 0 10px rgba(0,0,0,0.2);
+ }
+ .profile-img {
+ width: 150px;
+ border-radius: 10px;
+ margin-bottom: 20px;
+ }
+</style>
+
+<script>
+ function showSection(sectionId) {
+ document.getElementById("welcome").style.display = "none";
+ document.getElementById("profile").style.display = "none";
+ document.getElementById(sectionId).style.display = "block";
+ }
+</script>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="header">
+ <img src="school.jpg" class="logo">
+ <div class="title">Spring Flowers School</div>
+</div>
+
+<!-- MENU BAR -->
+<div class="navbar">
+ <a href="#" onclick="showSection('welcome')">Home</a>
+ <a href="#" onclick="showSection('profile')">Student Profile</a>
+</div>
+
+<!-- WELCOME PAGE -->
+<div id="welcome" class="section active">
+ <div class="card">
+ <h2>Welcome to Student Management Portal</h2>
+ <p>This is the official platform for Spring Flowers School students.</p>
+ <p>Use the menu above to navigate.</p>
+ </div>
+</div>
+
+<!-- STUDENT PROFILE PAGE -->
+<div id="profile" class="section">
+ <div class="card">
+ <h2>Student Profile</h2>
+ <img src="Venkat_image.jpg" class="profile-img">
+ <p><strong>Name:</strong> Venkat Thanam</p>
+ <p><strong>Class:</strong> 10th Grade</p>
+ <p><strong>Roll No:</strong> 21</p>
+ <p><strong>Location:</strong> Chennai</p>
+ </div>
+</div>
+
+</body>
+</html>
